@@ -1,47 +1,19 @@
 package com.generics;
 
 public class MaxOfThree {
-    public Integer maxOfThreeInt(Integer a, Integer b, Integer c) {
-        if(a.compareTo(b) > 0) {
-            if (a.compareTo(c)> 0)
-                return a;
-            else
-                return c;
-        }
-        else {
-            if (b.compareTo(c) > 0)
-                return b;
-            else
-                return c;
-        }
-    }
 
-    public Double maxOfThreeFlt(Double x, Double y, Double z) {
-        if(x.compareTo(y) > 0) {
-            if (x.compareTo(z)> 0)
-                return x;
+    public <E extends Comparable<E>> E maxOfThreeGeneric(E element1, E element2, E element3) {
+        if(element1.compareTo(element1) > 0) {
+            if (element1.compareTo(element3)> 0)
+                return element1;
             else
-                return z;
+                return element3;
         }
         else {
-            if (y.compareTo(z) > 0)
-                return y;
+            if (element1.compareTo(element3) > 0)
+                return element1;
             else
-                return z;
-        }
-    }
-    public String maxOfThreeStr(String x, String y, String z) {
-        if(x.compareTo(y) > 0) {
-            if (x.compareTo(z)> 0)
-                return x;
-            else
-                return z;
-        }
-        else {
-            if (y.compareTo(z) > 0)
-                return y;
-            else
-                return z;
+                return element3;
         }
     }
 }
