@@ -41,4 +41,22 @@ public class MaxOfThreeTest {
         Double result = maxOfThreeFloat.maxOfThreeFlt(9.0,8.0,44.0);
         Assertions.assertEquals(44.0, result);
     }
+    @Test
+    void given3String_ShouldReturn_MaxAt1() {
+        MaxOfThree maxOfThreeString = new MaxOfThree();
+        String result = maxOfThreeString.maxOfThreeStr("Sagar","Saga","Sag");
+        Assertions.assertEquals("Sagar", result);
+    }
+    @Test
+    void given3String_ShouldReturn_MaxAt2() {
+        MaxOfThree maxOfThreeString = new MaxOfThree();
+        String result = maxOfThreeString.maxOfThreeStr("Saga","Sagar","Sag");
+        Assertions.assertEquals("Sagar", result);
+    }
+    @Test
+    void given3String_ShouldReturn_MaxAt3() {
+        MaxOfThree maxOfThreeString = new MaxOfThree();
+        String result = maxOfThreeString.maxOfThreeStr("Sag","Saga","Sagar");
+        Assertions.assertEquals("Sagar", result);
+    }
 }
